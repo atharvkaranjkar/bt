@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-// pragma solidity ^0.8.6
+pragma solidity ^0.8.6;
 
 contract Student_management{
 
@@ -16,7 +16,7 @@ contract Student_management{
 		Students.push(stud);
 	}
 
-	function getStudent(int stud_id) public view returns(string memory, string memory){
+	function getStudent(int stud_id) public view returns(string memory Name, string memory Department){
 		for(uint i = 0; i < Students.length; i++){
 			Student memory stud = Students[i];
 			if(stud.stud_id == stud_id){
