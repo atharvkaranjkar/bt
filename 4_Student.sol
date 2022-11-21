@@ -17,7 +17,7 @@ contract Student_management{
 	}
 
 	function getStudent(int stud_id) public view returns(string memory Name, string memory Department){
-		for(uint i = 0; i < Students.length; i++){
+		for(uint i = 0; i <= Students.length; i++){
 			Student memory stud = Students[i];
 			if(stud.stud_id == stud_id){
 				return(stud.Name, stud.Department);
